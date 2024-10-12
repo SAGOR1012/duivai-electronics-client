@@ -1,18 +1,20 @@
 import { IoSearchCircle } from 'react-icons/io5';
 import { TbWorldBolt } from 'react-icons/tb';
+import { FaFacebook, FaYoutube, FaWhatsapp } from "react-icons/fa";
 
 const Navbar1 = () => {
     return (
-        <div className='   px-72  bg-white flex justify-between'>
-            <div className='navbar w-auto  '>
+        <div className='  md:px-54 lg:px-72  bg-white flex lg:justify-between justify-around items-center'>
+            <div className='navbar w-auto pt-5 '>
                 <div className=''>
                     <a className='btn btn-ghost text-xl'>DV Electronics</a>
                 </div>
-                <div className='  '>
+                {/* search box */ }
+                <div className=' hidden lg:flex '>
                     <input
                         type='text'
                         placeholder='Search for products'
-                        className='py-2 px-3  rounded-full w-[700px] bg-white border'
+                        className='py-2 px-3  rounded-full  lg:w-[700px] bg-white border'
                     />
                     <i className='relative -ml-12 text-5xl text-themeColor hover:text-blue-500 cursor-pointer'>
                         <IoSearchCircle />
@@ -20,9 +22,9 @@ const Navbar1 = () => {
                 </div>
             </div>
             {/* Contact section  */ }
-            <div className='  w-auto flex gap-4'>
-                <div className='flex gap-3 items-center'>
-                    <div className='w-6 h-5'>
+            <div className='w-auto  flex flex-row md:flex lg:gap-4 md:gap-2'>
+                <div className='flex gap-3 items-center text-xs md:text-neutral'>
+                    <div className='w-3 md:w-4 h-4 lg:w-6 lg:h-5'>
                         {/* icon */ }
                         <svg
                             id='Layer_1'
@@ -34,13 +36,13 @@ const Navbar1 = () => {
                         </svg>
                     </div>
                     {/* number */ }
-                    <div className='font-semibold'>
-                        <h4>24/7 Support</h4>
+                    <div className='font-semibold '>
+                        <h4 className=''>24/7 Support</h4>
                         <h4>+880 1707592670</h4>
                     </div>
                 </div>
-                <div className=' flex gap-3 items-center ' >
-                    <i className='text-3xl '>
+                <div className='  gap-3 items-center hidden md:flex' >
+                    <i className=' md:text-xl lg:text-3xl '>
                         <TbWorldBolt />{ ' ' }
                     </i>
                     <div className='font-semibold'>
@@ -49,6 +51,13 @@ const Navbar1 = () => {
                     </div>
 
                 </div>
+            </div>
+
+            {/* social media */ }
+            <div className='flex gap-2 md:hidden'>
+                <a href=""><i className='text-green-600'><FaWhatsapp /></i></a>
+                <a href=""><i className='text-blue-600'><FaFacebook /></i></a>
+                <a href=""><i className='text-red-600'><FaYoutube /></i></a>
             </div>
         </div>
     );
