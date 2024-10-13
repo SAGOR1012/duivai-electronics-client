@@ -74,7 +74,7 @@ const Navbar2 = () => {
                 </div>
 
                 {/* social media & booking curt*/ }
-                <div className=' hidden lg:flex justify-between border lg:w-[20%]'>
+                <div className=' hidden lg:flex justify-between items-center '>
                     {/* social media  */ }
                     <div className='  flex gap-2  '>
                         <a href=""><i className='text-white  '>< FaWhatsapp className='bg-green-500 w-6 md:w-10 h-6 md:h-10 p-1 md:p-2 rounded-full hover:scale-105' /></i></a>
