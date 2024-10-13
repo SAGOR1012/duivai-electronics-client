@@ -6,6 +6,7 @@ export default {
       colors: {
         bodybg: '#f6f6f6',
         themeColor: '#0866ff',
+        themeColor2: '#DBEAFE',
       },
     },
   },

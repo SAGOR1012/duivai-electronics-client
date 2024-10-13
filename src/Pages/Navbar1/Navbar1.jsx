@@ -1,30 +1,52 @@
 import { IoSearchCircle } from 'react-icons/io5';
 import { TbWorldBolt } from 'react-icons/tb';
 import { FaFacebook, FaYoutube, FaWhatsapp } from "react-icons/fa";
-
+import { FiMenu } from 'react-icons/fi';
+import logo from '../../assets/logo.jpg';
+import { Link } from 'react-router-dom';
 const Navbar1 = () => {
     return (
-        <div className='  md:px-54 lg:px-72  bg-white flex lg:justify-between justify-around items-center'>
-            <div className='navbar w-auto pt-5 '>
-                <div className=''>
-                    <a className='btn btn-ghost text-xl'>DV Electronics</a>
+        <div className='px-5  bg-white flex items items-center'>
+            {/* menu icon */ }
+            <div className='lg:hidden'>
+                <i><FiMenu></FiMenu></i>
+            </div>
+            <div className='navbar  pt-5 flex justify-around gap-10  '>
+
+                {/* logo */ }
+                <div className='ml-2'>
+                    <div className='w-10 md:w-[70px] '>
+                        <Link to='/' className=''> <img className='  h-full rounded-xl' src={ logo } alt="" /> </Link>
+
+                    </div>
+                    <h3 className='text-xl font-semibold ml-4'>Duivai Electronics</h3>
                 </div>
+
                 {/* search box */ }
-                <div className=' hidden lg:flex '>
+                <div className=' hidden xl:flex '>
                     <input
                         type='text'
                         placeholder='Search for products'
-                        className='py-2 px-3  rounded-full  lg:w-[700px] bg-white border'
+                        className='py-2 px-3  rounded-full lg:[400px] xl:w-[500px] 2xl:w-[600px] bg-white border'
                     />
                     <i className='relative -ml-12 text-5xl text-themeColor hover:text-blue-500 cursor-pointer'>
                         <IoSearchCircle />
                     </i>
                 </div>
+
+                {/* social media */ }
+                <div className='flex gap-2 md:text-xl xl:hidden '>
+                    <a href=""><i className='text-green-600 '>< FaWhatsapp className='bg-themeColor2 w-6 md:w-10 h-6 md:h-10 p-1 md:p-2 rounded-full' /></i></a>
+                    <a href=""><i className='text-blue-600'><FaFacebook className='bg-themeColor2 w-6 md:w-10 h-6 md:h-10 p-1 md:p-2 rounded-full' /></i></a>
+                    <a href=""><i className='text-red-600'><FaYoutube className='bg-themeColor2 w-6 md:w-10 h-6 md:h-10 p-1 md:p-2 rounded-full' /></i></a>
+                </div>
             </div>
+
             {/* Contact section  */ }
-            <div className='w-auto  flex flex-row md:flex lg:gap-4 md:gap-2'>
+            <div className=' hidden md:flex gap-4 w-[400px] xl:mr-32 '>
                 <div className='flex gap-3 items-center text-xs md:text-neutral'>
-                    <div className='w-3 md:w-4 h-4 lg:w-6 lg:h-5'>
+                    {/* msg icon */ }
+                    <div className='w-3 h-3 md:w-5 md:h-5'>
                         {/* icon */ }
                         <svg
                             id='Layer_1'
@@ -36,13 +58,13 @@ const Navbar1 = () => {
                         </svg>
                     </div>
                     {/* number */ }
-                    <div className='font-semibold '>
+                    <div className='font-semibold  px-1'>
                         <h4 className=''>24/7 Support</h4>
                         <h4>+880 1707592670</h4>
                     </div>
                 </div>
-                <div className='  gap-3 items-center hidden md:flex' >
-                    <i className=' md:text-xl lg:text-3xl '>
+                <div className=' hidden lg:flex gap-3 items-center text-slate-900' >
+                    <i className='  lg:text-3xl '>
                         <TbWorldBolt />{ ' ' }
                     </i>
                     <div className='font-semibold'>
@@ -53,12 +75,8 @@ const Navbar1 = () => {
                 </div>
             </div>
 
-            {/* social media */ }
-            <div className='flex gap-2 md:hidden'>
-                <a href=""><i className='text-green-600'><FaWhatsapp /></i></a>
-                <a href=""><i className='text-blue-600'><FaFacebook /></i></a>
-                <a href=""><i className='text-red-600'><FaYoutube /></i></a>
-            </div>
+
+
         </div>
     );
 };
